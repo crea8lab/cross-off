@@ -11,17 +11,21 @@
   <h1>My Todo List</h1>
   <div id="todo-table">
     <form>
-      <input type="text" placeholder="Add new todo..." name="item" required>
+      <input type="text" placeholder="Add new todo..." name="item" required autoFocus>
       <button type="submit">Add Item</button>
     </form>
 
+    <% if (todos.length <= 0) { %>
+      <p class="no-todos">You do not have any current todos...</p>
+    <% } %>
     <ul>
-      <li>item 1</li>
-      <li>item 2</li>
-      <li>item 3</li>
+      <% todos.forEach(todo => { %>
+        <li><%= todo.name %></li>
+      <% }) %>
     </ul>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/assets/todo-list.js"></script>
 </body>
 </html>
