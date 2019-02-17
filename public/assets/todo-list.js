@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     $.ajax({
       type: 'POST',
-      url: '/todo',
+      url: '/todos',
       data: todo,
       success: function(data){
         //do something with the data via front-end framework
@@ -23,7 +23,7 @@ $(document).ready(function(){
       const item = $(this).text().replace(/ /g, "-");
       $.ajax({
         type: 'DELETE',
-        url: '/todo/' + item,
+        url: '/todos/' + item,
         success: function(data){
           //do something with the data via front-end framework
           location.reload();
