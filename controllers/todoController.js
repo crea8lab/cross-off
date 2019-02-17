@@ -22,7 +22,6 @@ module.exports = {
         name: item
       }).save()
       res.json(data)
-      console.log(data)
     } catch (error) {
       res.status(404) 
       res.send(error)
