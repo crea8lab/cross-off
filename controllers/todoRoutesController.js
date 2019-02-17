@@ -5,5 +5,5 @@ module.exports = (app) => {
 
   app.post('/todos', todoController.createTodo)
 
-  app.delete('/todos', todoController.deleteTodo)
+  app.delete('/todos/:item', todoController.deleteTodo)
 }
