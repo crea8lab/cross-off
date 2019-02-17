@@ -1,0 +1,35 @@
+{
+  "name": "cross-off",
+  "version": "1.0.0",
+  "description": "A nodeJs todo application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crea8lab/cross-off.git"
+  },
+  "keywords": [
+    "todo",
+    "app",
+    "api",
+    "node",
+    "express",
+    "exercise",
+    "practise"
+  ],
+  "author": "Favour George <phavorsparks@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crea8lab/cross-off/issues"
+  },
+  "homepage": "https://github.com/crea8lab/cross-off#readme",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "dotenv": "6.2.0",
+    "ejs": "2.6.1",
+    "express": "4.16.4",
+    "mongoose": "5.4.13"
+  }
+}
