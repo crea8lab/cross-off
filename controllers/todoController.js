@@ -21,18 +21,21 @@ module.exports = {
       let data = await Todo({
         name: item
       }).save()
-      res.json(data)
+      return res.json(data)
     } catch (error) {
       res.status(404) 
-      res.send(error)
-      res.json({ success: false })
+      return res.json({ success: false })
     }
   },
 
-  deleteTodo: async (req, res) => {
-    let data = await Todo.findOneAndRemove({
-      item: req.params.item.replace(/\-/g, ' ')
-    })
-    res.redirect('/todos')
+  deleteTodo: (req, res) => {
+    let item = req.params.item.replace(/\-/g, ' ')
+    Todo.findOneAndRemove({ name: item })
+      .then((data) => {
+        return res.json(data)
+      })
+      .catch(err => {
+        res.json(err)
+      })
   }
 }
