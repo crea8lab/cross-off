@@ -9,9 +9,13 @@ $(document).ready(function(){
       type: 'POST',
       url: '/todos',
       data: todo,
+      timeout: 5000,
       success: function(data){
         //do something with the data via front-end framework
         location.reload();
+      },
+      fail: function (xhr, textStatus, thrownError) {
+        console.log('failed', xhr)
       }
     });
 
@@ -24,6 +28,7 @@ $(document).ready(function(){
       $.ajax({
         type: 'DELETE',
         url: '/todos/' + item,
+        timeout: 5000,
         success: function(data){
           //do something with the data via front-end framework
           location.reload();
