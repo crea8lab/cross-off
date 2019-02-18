@@ -15,7 +15,7 @@ $(document).ready(function(){
         location.reload();
       },
       fail: function (xhr, textStatus, thrownError) {
-        console.log('failed', xhr)
+        console.log('failed', textStatus)
       }
     });
 
