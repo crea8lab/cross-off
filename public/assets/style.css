@@ -57,6 +57,7 @@ li{
     font-size: 20px;
     cursor: pointer;
     letter-spacing: 1px;
+    position: relative;
 }
 
 li:hover{
@@ -74,4 +75,11 @@ h1{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 1em;
+}
+
+.ts {
+    font-size: .55em;
+    position: absolute;
+    right: 0.2em;
+    color: #445a7b;
 }

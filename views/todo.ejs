@@ -20,7 +20,10 @@
     <% } %>
     <ul>
       <% todos.forEach(todo => { %>
-        <li><%= todo.name %></li>
+        <li>
+          <%= todo.name %>
+          <span class="ts"><%= moment(todo.date).fromNow() %></span>
+        </li>
       <% }) %>
     </ul>
   </div>

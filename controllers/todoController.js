@@ -27,7 +27,7 @@ module.exports = {
       }).save()
       return res.json(data)
     } catch (error) {
-      res.status(404) 
+      res.status(409) 
       return res.json({ success: false })
     }
   },
