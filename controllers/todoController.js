@@ -1,6 +1,10 @@
 const Todo = require('../models/todo')
 
 module.exports = {
+  home: (req, res) => {
+    res.redirect('/todos')
+  },
+
   getAll: async (req, res) => {
     try {
       let todo = await Todo.find({}).sort({ date: -1 })
