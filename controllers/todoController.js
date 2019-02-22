@@ -36,7 +36,6 @@ module.exports = {
     let item = req.params.item.replace(/\-/g, " ");
     Todo.findOneAndRemove({ name: item })
       .then(data => {
-        console.log(data);
         return res.json(data);
       })
       .catch(err => {
